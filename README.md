@@ -22,5 +22,23 @@
 	使用object 定义的对象     
 	伴生对象、伴生类 与class 同名的object；object 主要作用放置与实例无关的方法和属性；伴生类和伴生对象必须在相同的文件内     
 ### right-ignoring序列模式:
+	可以使用.r将任意字符串转化为一个正则表达式   
+### for 表达式:
+	for (enumerators) yield e      
+	enumerators 指一组以分号分割的枚举器。一个enumerator要么是一个产生新变量的生产器，要么是一个过滤器     
+	```
+	case class User(name: String, age: Int)
+	val userBase = List(User("Travis", 28),
+  		User("Kelly", 33),
+  		User("Jennifer", 44),
+  		User("Dennis", 23))
+
+	val twentySomethings = for (user <- userBase if (user.age >=20 && user.age < 30))
+  		yield user.name  // i.e. add this to a list
+
+	twentySomethings.foreach(name => println(name))
+	```
+	user <- userBase 是生成器      
+	if(user.age>=20&&user.age<30)是过滤器  
 	
 
