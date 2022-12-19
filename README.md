@@ -40,5 +40,10 @@
 	```
 	user <- userBase 是生成器      
 	if(user.age>=20&&user.age<30)是过滤器  
-	
+
+### 型变
+#### 协变
+    对于某些类 class List[+A],使A成为协变意味着对于两种类型A和B，如果A是B的子类型，那么List[A]就是List[B]的子类型。
+#### 逆变
+    对于某些类 class Writer[-A],使A逆变意味着对于两种类型A和B，如果A是B的子类型，那么Writer[B]是Writer[A]的子类型。
 
