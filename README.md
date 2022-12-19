@@ -46,4 +46,15 @@
     对于某些类 class List[+A],使A成为协变意味着对于两种类型A和B，如果A是B的子类型，那么List[A]就是List[B]的子类型。
 #### 逆变
     对于某些类 class Writer[-A],使A逆变意味着对于两种类型A和B，如果A是B的子类型，那么Writer[B]是Writer[A]的子类型。
+#### 上界、下界（未理解，源文档链接如下）
+    https://docs.scala-lang.org/zh-cn/tour/upper-type-bounds.html     
+    https://docs.scala-lang.org/zh-cn/tour/lower-type-bounds.html    
+
+### 内部类
+    scala的内部类绑定到外部类的对象上；通过不同的外部类对象创建的内部类对象属于不同的类别       
+    参考：innerclass.Graph
+
+
+
+
 
