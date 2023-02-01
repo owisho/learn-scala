@@ -4,7 +4,11 @@ abstract class Element{
   }
 }
 
+//final class ArrayElement extends Element{
+//if class is decorated by keyword final, it can not have sub class
 class ArrayElement extends Element{
+  //final override def demo() = {
+  //if method is decorated by keyword final, it can not be override by sub class
   override def demo() = {
     println("ArrayElement's implementation invoked")
   }
