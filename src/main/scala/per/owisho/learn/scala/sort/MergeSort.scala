@@ -1,3 +1,7 @@
+/**
+ * 归并排序
+ * 时间复杂度n log(n)
+ */
 object MergeSort {
   def merge[T](less:(T,T)=>Boolean)(xs:List[T],ys:List[T]) :List[T] = 
     (xs,ys) match {
