@@ -1,4 +1,5 @@
-package scala.per.owisho.learn.scala.test
+package scala.per.owisho.learn.scala.test.hello
+
 import org.scalatest.diagrams.Diagrams
 import org.scalatest.funsuite.AnyFunSuite
 
