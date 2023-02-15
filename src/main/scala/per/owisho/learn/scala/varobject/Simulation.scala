@@ -1,5 +1,3 @@
-package scala.per.owisho.learn.scala.varobject
-
 abstract class Simulation {
   type Action = () => Unit
 
