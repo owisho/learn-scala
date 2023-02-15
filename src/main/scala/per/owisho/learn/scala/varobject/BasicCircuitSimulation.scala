@@ -1,3 +1,4 @@
+package scala.per.owisho.learn.scala.varobject
 abstract class BasicCircuitSimulation extends Simulation {
   def InverterDelay: Int
 
