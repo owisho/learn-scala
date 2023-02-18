@@ -3,6 +3,7 @@ package scala.per.owisho.learn.scala.varobject
 abstract class CircuitSimulation extends BasicCircuitSimulation {
   def halfAdder(a: Wire, b: Wire, s: Wire, c: Wire): Unit = {
     val d, e = new Wire
+    println(s"d id=${d.id} \ne id=${e.id}")
     orGate(a, b, d)
     andGate(a, b, c)
     inverter(c, e)

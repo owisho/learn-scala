@@ -1,4 +1,7 @@
 package scala.per.owisho.learn.scala.varobject
+
+import scala.util.Random
+
 abstract class BasicCircuitSimulation extends Simulation {
   def InverterDelay: Int
 
@@ -9,11 +12,13 @@ abstract class BasicCircuitSimulation extends Simulation {
   class Wire {
     private var sigVal = false
     private var actions: List[Action] = List()
+    val id = Random.between(0,99)
 
     def getSignal = sigVal
 
     def setSignal(s: Boolean) =
       if (s != sigVal) {
+        println(s"current id=${id}")
         sigVal = s
         actions.foreach(_ ())
       }
@@ -31,6 +36,7 @@ abstract class BasicCircuitSimulation extends Simulation {
         output setSignal (!inputSig)
       }
     }
+
     input.addAction(invertAction)
   }
 
@@ -62,7 +68,7 @@ abstract class BasicCircuitSimulation extends Simulation {
 
   def probe(name: String, wire: Wire) = {
     def probeAction() = {
-      println(name + " " + currentTime + "new-value = " + wire.getSignal)
+      println(name + " " + currentTime + " new-value = " + wire.getSignal)
     }
 
     wire.addAction(probeAction)

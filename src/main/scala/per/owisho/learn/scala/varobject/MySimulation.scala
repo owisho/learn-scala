@@ -9,11 +9,12 @@ class MySimulation extends CircuitSimulation {
 
   def test(): Unit = {
     val input1, input2, sum, carry = new Wire
+    println(s"input1 id=${input1.id} \ninput2 id=${input2.id} \ninput3 id=${sum.id} \ninput4 id=${carry.id}")
     probe("sum", sum)
     probe("carry", carry)
     halfAdder(input1, input2, sum, carry)
     input1 setSignal true
-    input2 setSignal true
+//    input2 setSignal true
     run()
   }
 }

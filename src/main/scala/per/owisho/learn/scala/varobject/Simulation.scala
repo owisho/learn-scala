@@ -1,9 +1,11 @@
 package scala.per.owisho.learn.scala.varobject
+
 abstract class Simulation {
   type Action = () => Unit
 
   case class WorkItem(time: Int, action: Action)
 
+  private var count = 0
   private var curtime = 0
 
   def currentTime: Int = curtime
@@ -23,9 +25,11 @@ abstract class Simulation {
   private def next() = {
     (agenda: @unchecked) match {
       case item :: rest =>
+        count = count + 1
+        println(s"loop num = ${count}")
         agenda = rest
         curtime = item.time
-        item.action
+        item.action()
     }
   }
 
